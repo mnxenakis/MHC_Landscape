@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "DQ-clustering"
+version = "0.1.0"
+description = "Publication release for HLA-DQ energy-distribution clustering and FoldX energy summaries."
+requires-python = ">=3.10"
+dependencies = [
+    "biopython",
+    "matplotlib",
+    "numpy",
+    "openpyxl",
+    "pandas",
+    "scikit-learn",
+    "scipy",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["DQ_clustering*", "contact_analysis*", "features*"]
+
+[tool.setuptools.package-data]
+contact_analysis = ["reference_tables/*.tsv"]

@@ -1,0 +1,85 @@
+# Core CLI defaults
+cli_knn = 25                     # kNN size for spectral clustering
+cli_bins = 50                    # histogram bins when not specified
+cli_clusters = 3                 # default number of clusters
+cli_max_iter = 100               # max iterations for iterative solvers
+cli_tol = 1e-4                   # convergence tolerance
+cli_smoothing = 1e-6             # additive smoothing for histograms
+cli_cluster_mode = bregman       # default clustering backend
+cli_sigma = nan                  # spectral bandwidth (nan = auto)
+cli_hier_linkage = average       # linkage for hierarchical mode
+cli_dbscan_eps = 0.1             # DBSCAN epsilon (JS distance)
+cli_dbscan_min_samples = 5       # DBSCAN min_samples
+cli_permutations = 200           # permutation test iterations
+cli_bootstrap = 0                # bootstrap reps (0 = disabled)
+cli_seed = 42                    # RNG seed
+cli_rank_min = 1                 # inclusive AlphaFold rank filter (min)
+cli_rank_max = 1000              # inclusive AlphaFold rank filter (max)
+cli_mol_part = whole             # default molecular part label
+cli_plot_rank_energy = false     # plot rank vs energy by default
+
+# Fragmentation experiment defaults
+fragment_bins = 48               # bins for cohesion scans
+fragment_smoothing = 1e-6        # smoothing on histograms
+fragment_k_min = 2               # minimum k for scans
+fragment_k_max = 8               # maximum k for scans
+fragment_seed_start = 1          # first seed in sweep
+fragment_seed_end = 50           # last seed in sweep
+fragment_seed_step = 1           # seed step in sweep
+fragment_knn = 25                # kNN for spectral during fragmentation
+fragment_sigma = nan             # spectral sigma (nan = auto)
+fragment_rank_min = 1            # default rank window min
+fragment_rank_max = 1000         # default rank window max
+
+# Algorithmic constants
+algo_eps = 1e-12                         # numerical floor
+algo_euclidean_kmeans_max_iter = 300     # fallback k-means iters
+algo_spectral_max_attempts = 5           # spectral retries for k>2
+algo_spectral_knn_step = 1               # step when searching knn
+algo_dbscan_eps_quantile = 0.3           # quantile for DBSCAN eps heuristic
+algo_dbscan_fallback_eps = 0.5           # fallback eps if heuristic fails
+algo_scatter_point_size = 40             # scatter size in diagnostics
+algo_scatter_alpha = 0.8                 # scatter transparency
+algo_grid_alpha = 0.3                    # grid transparency
+algo_label_fontsize = 8                  # default label font size
+algo_label_fontsize_class1 = 9           # class-1 label font size
+algo_label_color_class1 = red            # class-1 label color
+algo_centroid_label_fontsize = 9         # centroid label size
+algo_figsize_confusion_margins = 10,8    # figure size for confusion/margins plots
+algo_figsize_cluster_scatter = 10, 8   # figure size for cluster scatter plots
+
+# Plot styling
+plot_fit_poly_max_degree = 3
+plot_fit_grid_points = 200
+plot_scatter_size = 20
+plot_scatter_special_size = 60
+plot_scatter_alpha_generic = 0.7
+plot_errorbar_capsize = 3
+plot_hist_bins = 30
+plot_kde_grid_points = 400
+plot_kde_linewidth = 1.5
+plot_iqr_span_alpha = 0.2
+plot_median_line_alpha = 0.5
+plot_ygrid_alpha = 0.3
+plot_ymajor_locator_step = 10
+plot_centroid_fig_cols = 3
+plot_heatmap_fig_w_scale = 1.0
+plot_heatmap_fig_h_scale = 0.8
+plot_heatmap_min_w = 12
+plot_heatmap_min_h = 8
+plot_tick_decade_step = 5
+
+# FoldX analysis defaults
+foldx_default_bootstrap = 0
+foldx_default_seed = 42
+foldx_alpha = 1.0
+foldx_conf_level = 0.95
+foldx_min_samples_adv_stats = 10
+foldx_boxplot_min_width = 6.0
+foldx_boxplot_width_per_label = 0.3
+foldx_boxplot_height = 8.0
+foldx_boxplot_color_base = #c6dbef
+foldx_boxplot_color_special = #ffdd99
+foldx_boxplot_median_color = #d62728
+foldx_ymajor_locator_step = 10
+foldx_grid_alpha = 0.3
