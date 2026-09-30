@@ -1,8 +1,8 @@
-# DQ_clustering
+# MHC_Landscape
 
 This repository contains the key scripts used to analyze structure-derived
-energetic rules of CLIP-loaded HLA-DQ heterodimers. The study focused on a
-family-wide panel of full-length, mature HLA-DQ molecules formed by combining
+energetic rules of CLIP-loaded HLA-DQ heterodimers. We focus on a
+panel of full-length, mature HLA-DQ molecules formed by combining
 12 HLA-DQ alpha chains with 18 HLA-DQ beta chains, giving
 `12 x 18 = 216` alpha/beta heterodimers. For each heterodimer, rank-ordered
 ColabFold/AlphaFold2 models were generated and analyzed with FoldX, RMSD-based
@@ -12,14 +12,9 @@ This release contains the core scripts for the main computational workflows.
 
 ## Biological Motivation
 
-HLA-DQ molecules are assembled from an alpha chain, a beta chain, and a peptide
-occupying the class-II binding groove. During biosynthesis, this groove is
-occupied by CLIP, the class-II-associated invariant-chain peptide. This release
-therefore focuses on CLIP-loaded HLA-DQ molecules. However, the same workflow
-can be used for any peptide-loaded HLA-DQ complex by replacing the CLIP sequence
-in the input FASTA. Stable peptide-loaded alpha/beta heterodimer formation is an
+Stable CLIP-loaded alpha/beta heterodimer formation is an
 early energetic checkpoint: alpha/beta combinations must form a favorable
-scaffold while also accommodating the peptide at a manageable energetic cost.
+scaffold while also accommodating CLIP at a manageable energetic cost.
 
 The scripts in this release quantify this balance. FoldX calculations decompose
 each modeled heterodimer into whole-molecule stability, intrinsic chain terms,
@@ -28,6 +23,8 @@ then treated as an ensemble of alternative CLIP-loaded conformational states for
 each molecule. The clustering algorithms ask whether these rank-wise energetic
 fingerprints define reproducible alpha/beta pairing regimes, and whether those
 regimes correspond to biologically meaningful cis/trans organization.
+
+The same workflow can be used for any peptide-loaded HLA-DQ complex by replacing the CLIP sequence in the input FASTA.
 
 ## FASTA Input Convention
 
